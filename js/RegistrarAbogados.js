@@ -40,7 +40,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     })
     .then(text => {
       console.log('Respuesta del servidor:', text); // Mostrar la respuesta en la consola
-      alert(text); // Mostrar el texto directamente
+      alert("Registro Exitoso"); // Mostrar el texto directamente
       window.location.href = 'PaginaPrincipalLogueada.html';
     })
     .catch(error => {
