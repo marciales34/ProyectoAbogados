@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Case Hub</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="icon" href="img/abogado.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img class="img1" src="img/logo11.png" alt="">
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li>Inicio</li>
+                        <li>Nuevo Caso</li>
+                        <li>Especializaciones</li>
+                        <li>Mis Casos</li>
+                        <li>Contacto</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="buttons">
+                <button class="btn" onclick="window.location.href='PaginaPrincipalLogueada.html'">Mi Cuenta</button>
+                <button class="btn" id="btnLogout" onclick="window.location.href='Home.html'">Salir</button>
+            </div>
+        </div>
+
+        <div class="tabla-abogados-container">
+            <h1>Lista de Abogados Registrados</h1>
+            <table id="tabla-abogados">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Especialización</th>
+                        <th>Rol</th>
+                        <th>Acciones</th> <!-- Columna para los botones de acción -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos de los abogados se insertarán aquí dinámicamente desde el archivo JS -->
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+    <script src="js/abogados.js"></script>
+    <script src="js/ListaAbogados.js"></script>
+    <script>
+        document.getElementById('btnLogout').addEventListener('click', function (event) {
+            // Mostrar una alerta de confirmación
+            const confirmLogout = confirm("¿Estás seguro de que deseas cerrar sesión?");
+
+            // Si el usuario confirma, redirigir a la página de inicio de sesión
+            if (confirmLogout) {
+                window.location.href = 'Home.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
